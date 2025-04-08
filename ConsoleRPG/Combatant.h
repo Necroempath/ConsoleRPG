@@ -2,6 +2,7 @@
 #include "string.h"
 class Combatant
 {
+protected:
 	string _name;
 
 	struct Stat
@@ -67,6 +68,7 @@ class Combatant
 	void increaseAP(const int value);
 #pragma endregion
 
+public:
 	virtual ~Combatant();
 };
 
