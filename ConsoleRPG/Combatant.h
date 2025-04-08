@@ -1,36 +1,29 @@
 #pragma once
-#include "string.h"
+//#include "string.h"
 class Combatant
 {
 protected:
-	string _name;
+	//string _name;
 
 	struct Stat
 	{
-		int _base;
-		int _permanent;
-		int _temporary;
+		static int _hp;
+		static int _maxHp;
+		static int _stamina;
+		static int _maxStamina;
+		static int _AP;
+		static int _speed;
+		static int _minDamage;
+		static int _maxDamage;
+		static int _hitRating;
+		static int _critRating;
+		static int _evasion;
+		static int _blockRating;
+		static int _blockPower;
+		static int _armor;
+		static int _armorPenetration;
+		static int _resistance;
 	};
-
-#pragma region Stats
-	Stat _hp;
-	Stat _maxHp;
-	Stat _stamina;
-	Stat _maxStamina;
-	Stat _speed;
-	Stat _minDamage;
-	Stat _maxDamage;
-	Stat _hitRating;
-	Stat _critRating;
-	Stat _evasion;
-	Stat _blockRating;
-	Stat _blockPower;
-	Stat _armor;
-	Stat _armorPenetration;
-	Stat _resistance;
-
-	int _AP;
-#pragma endregion
 
 #pragma region Accessors
 	const Stat& getHp() const;
