@@ -28,7 +28,6 @@ protected:
 	Stat _armor;
 	Stat _armorPenetration;
 	Stat _resistance;
-	Stat _resistancePenetration;
 
 	int _AP;
 #pragma endregion

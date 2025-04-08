@@ -130,13 +130,19 @@
     <ClCompile Include="Combatant.cpp" />
     <ClCompile Include="ConsoleRPG.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Hero.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="MainMenuUI.cpp" />
     <ClCompile Include="string.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Combatant.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="Hero.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="MainMenuUI.h" />
     <ClInclude Include="string.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
