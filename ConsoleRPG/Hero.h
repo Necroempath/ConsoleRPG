@@ -3,7 +3,7 @@
 class Hero : public Combatant
 {
 public:
-	//explicit Hero(string name) { _name = name; };
+	explicit Hero(const string& name, const BaseStats& stats);
 
 	virtual ~Hero();
 };

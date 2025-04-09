@@ -1,49 +1,33 @@
 #pragma once
-//#include "string.h"
+#include "string.h"
+#include "BaseStats.h"
 class Combatant
 {
+private:
+	virtual void abstract() = 0;
+
 protected:
-	//string _name;
+	string _name;
+	BaseStats _stats;
 
-	struct Stat
-	{
-		static int _hp;
-		static int _maxHp;
-		static int _stamina;
-		static int _maxStamina;
-		static int _AP;
-		static int _speed;
-		static int _minDamage;
-		static int _maxDamage;
-		static int _hitRating;
-		static int _critRating;
-		static int _evasion;
-		static int _blockRating;
-		static int _blockPower;
-		static int _armor;
-		static int _armorPenetration;
-		static int _resistance;
-	};
-
+    Combatant(const string& name, const BaseStats& stats) : _name(name), _stats(stats) {};
 #pragma region Accessors
-	const Stat& getHp() const;
-	const Stat& getMaxHp() const;
-	const Stat& getStamina() const;
-	const Stat& getMaxStamina() const;
-	const Stat& getSpeed() const;
-	const Stat& getMinDamage() const;
-	const Stat& getMaxDamage() const;
-	const Stat& getHitRating() const;
-	const Stat& getCritRating() const;
-	const Stat& getEvasion() const;
-	const Stat& getBlockRating() const;
-	const Stat& getBlockPower() const;
-	const Stat& getArmor() const;
-	const Stat& getArmorPenetration() const;
-	const Stat& getResistance() const;
-	const Stat& getResistancePenetration() const;
-
-	int getAP() const;
+    int hp() const;
+    int maxHp() const;
+    int stamina() const;
+    int maxStamina() const;
+    int AP() const;
+    int speed() const;
+    int minDamage() const;
+    int maxDamage() const;
+    int hitRating() const;
+    int critRating() const;
+    int evasion() const;
+    int blockRating() const;
+    int blockPower() const;
+    int armor() const;
+    int armorPenetration() const;
+    int resistance() const;
 #pragma endregion
 
 #pragma region StatModifiers

@@ -1,99 +1,48 @@
 #include "Combatant.h"
 
 #pragma region Accessors
-//const int Combatant::getHp() const {
-//    return Stat::_hp;
-//}
-//
-//const Combatant::Stat& Combatant::getMaxHp() const {
-//    return _maxHp;
-//}
-//
-//const Combatant::Stat& Combatant::getStamina() const {
-//    return _stamina;
-//}
-//
-//const Combatant::Stat& Combatant::getMaxStamina() const {
-//    return _maxStamina;
-//}
-//
-//const Combatant::Stat& Combatant::getSpeed() const {
-//    return _speed;
-//}
-//
-//const Combatant::Stat& Combatant::getMinDamage() const {
-//    return _minDamage;
-//}
-//
-//const Combatant::Stat& Combatant::getMaxDamage() const {
-//    return _maxDamage;
-//}
-//
-//const Combatant::Stat& Combatant::getHitRating() const {
-//    return _hitRating;
-//}
-//
-//const Combatant::Stat& Combatant::getCritRating() const {
-//    return _critRating;
-//}
-//
-//const Combatant::Stat& Combatant::getEvasion() const {
-//    return _evasion;
-//}
-//
-//const Combatant::Stat& Combatant::getBlockRating() const {
-//    return _blockRating;
-//}
-//
-//const Combatant::Stat& Combatant::getBlockPower() const {
-//    return _blockPower;
-//}
-//
-//const Combatant::Stat& Combatant::getArmor() const {
-//    return _armor;
-//}
-//
-//const Combatant::Stat& Combatant::getArmorPenetration() const {
-//    return _armorPenetration;
-//}
-//
-//const Combatant::Stat& Combatant::getResistance() const {
-//    return _resistance;
-//}
-//
-//const Combatant::Stat& Combatant::getResistancePenetration() const {
-//    return _resistancePenetration;
-//}
-//
-//int Combatant::getAP() const {
-//    return _AP;
-//}
-//#pragma endregion
-//
-//#pragma region StatModifiers
-//void Combatant::decreaseHp(const int value) {
-//	Stat::_hp -= value;
-//}
-//
-//void Combatant::increaseHp(const int value) {
-//    Stat::_hp += value;
-//}
-//
-//void Combatant::decreaseStamina(const int value) {
-//    Stat::_stamina -= value;
-//}
-//
-//void Combatant::increaseStamina(const int value) {
-//    Stat::_stamina += value;
-//}
-//
-//void Combatant::decreaseAP(const int value) {
-//    Stat::_AP -= value;
-//}
-//
-//void Combatant::increaseAP(const int value) {
-//    Stat::_AP += value;
-//}
-//#pragma endregion
+int Combatant::hp() const { return _stats.hp; }
+int Combatant::maxHp() const { return _stats.maxHp; }
+int Combatant::stamina() const { return _stats.stamina; }
+int Combatant::maxStamina() const { return _stats.maxStamina; }
+int Combatant::AP() const { return _stats.AP; }
+int Combatant::speed() const { return _stats.speed; }
+int Combatant::minDamage() const { return _stats.minDamage; }
+int Combatant::maxDamage() const { return _stats.maxDamage; }
+int Combatant::hitRating() const { return _stats.hitRating; }
+int Combatant::critRating() const { return _stats.critRating; }
+int Combatant::evasion() const { return _stats.evasion; }
+int Combatant::blockRating() const { return _stats.blockRating; }
+int Combatant::blockPower() const { return _stats.blockPower; }
+int Combatant::armor() const { return _stats.armor; }
+int Combatant::armorPenetration() const { return _stats.armorPenetration; }
+int Combatant::resistance() const { return _stats.resistance; }
+#pragma endregion
+
+#pragma region StatModifiers
+void Combatant::decreaseHp(const int value) {
+	_stats.hp -= value;
+}
+
+void Combatant::increaseHp(const int value) {
+    _stats.hp += value;
+}
+
+void Combatant::decreaseStamina(const int value) {
+    _stats.stamina -= value;
+}
+
+void Combatant::increaseStamina(const int value) {
+    _stats.stamina += value;
+}
+
+void Combatant::decreaseAP(const int value) {
+    _stats.AP -= value;
+}
+
+void Combatant::increaseAP(const int value) {
+    _stats.AP += value;
+}
+#pragma endregion
 
 Combatant::~Combatant() = default;

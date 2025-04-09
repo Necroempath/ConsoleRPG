@@ -137,6 +137,7 @@
     <ClCompile Include="string.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseStats.h" />
     <ClInclude Include="Combatant.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
