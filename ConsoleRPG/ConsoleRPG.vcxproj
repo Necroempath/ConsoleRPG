@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CombatAction.cpp" />
     <ClCompile Include="Combatant.cpp" />
     <ClCompile Include="ConsoleRPG.cpp" />
     <ClCompile Include="Enemy.cpp" />
@@ -134,17 +135,23 @@
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="MainMenuUI.cpp" />
+    <ClCompile Include="StandardAttack.cpp" />
     <ClCompile Include="string.cpp" />
+    <ClCompile Include="Technique.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BaseStats.h" />
+    <ClInclude Include="CombatantStats.h" />
+    <ClInclude Include="CombatAction.h" />
     <ClInclude Include="Combatant.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="MainMenuUI.h" />
+    <ClInclude Include="StandardAttack.h" />
     <ClInclude Include="string.h" />
+    <ClInclude Include="Technique.h" />
+    <ClInclude Include="TechniqueStats.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

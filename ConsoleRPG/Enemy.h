@@ -3,7 +3,7 @@
 class Enemy : public Combatant
 {
 public:
-	explicit Enemy(const string& name, const BaseStats& stats);
+	explicit Enemy(const string& name, const CombatantStats& stats);
 
 	virtual ~Enemy();
 };

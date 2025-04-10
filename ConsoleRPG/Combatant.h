@@ -1,16 +1,18 @@
 #pragma once
 #include "string.h"
-#include "BaseStats.h"
+#include "CombatantStats.h"
 class Combatant
 {
 private:
-	virtual void abstract() = 0;
+	//virtual void abstract() = 0;
 
 protected:
 	string _name;
-	BaseStats _stats;
+	CombatantStats _stats;
+    CombatantStats _temp;
 
-    Combatant(const string& name, const BaseStats& stats) : _name(name), _stats(stats) {};
+    Combatant(const string& name, const CombatantStats& stats) : _name(name), _stats(stats), _temp() {};
+
 #pragma region Accessors
     int hp() const;
     int maxHp() const;
