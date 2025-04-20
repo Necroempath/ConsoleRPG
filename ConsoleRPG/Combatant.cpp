@@ -1,4 +1,15 @@
 #include "Combatant.h"
+#pragma region GlobalAccessors
+const string& Combatant::GetName() const
+{
+    return _name;
+}
+
+const HashTable<string, Technique>& Combatant::GetTechniques() const
+{
+    return _techniques;
+}
+#pragma endregion
 
 #pragma region Accessors
 int Combatant::Hp() const { return _stats.hp; }

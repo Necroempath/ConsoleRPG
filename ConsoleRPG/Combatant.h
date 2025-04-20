@@ -1,6 +1,8 @@
 #pragma once
 #include "string.h"
+#include "HashTable.h"
 #include "CombatantStats.h"
+#include "StandardAttack.h"
 class Combatant
 {
 private:
@@ -10,11 +12,17 @@ protected:
 	string _name;
 	CombatantStats _stats;
     CombatantStats _temp;
+    HashTable<string, Technique*> _techniques;
 
-    Combatant(const string& name, const CombatantStats& stats) : _name(name), _stats(stats), _temp() {};
+    Combatant(const string& name, const CombatantStats& stats, const HashTable<string, Technique> techniques) : _name(name), _stats(stats), _temp(), _techniques(techniques) {};
 
 public:
-#pragma region Accessors
+#pragma region GlobalAccessors
+    const string& GetName() const;
+    const HashTable<string, Technique*>& GetTechniques() const;
+#pragma endregion
+
+#pragma region StatAccessors
     int Hp() const;
     int MaxHp() const;
     int Stamina() const;

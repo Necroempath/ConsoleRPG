@@ -1,32 +1,47 @@
-#include "StandardAttack.h"
+﻿#include "StandardAttack.h"
 
 string StandardAttack::_name("Standard attack");
 
 StandardAttack::StandardAttack(const TechniqueStats& stats) : Technique(stats) {};
 
-void StandardAttack::Execute(Combatant& performer, Combatant& target) const
+StandardAttack::~StandardAttack() = default; 
+
+ActionReport StandardAttack::Execute(Combatant& performer, Combatant& target) const
 {
-	performer.decreaseAP(_stats._APConsumption);
-	target.increaseAP(_stats._APConsumption);
+	ActionReport report;
 
 	performer.decreaseStamina(_stats._staminaConsumption);
-	StandardAttack();
-	if (ProbabilityResolver::IsHit(performer.HitRating(), target.Evasion()))
-	{
-		if (ProbabilityResolver::IsCrit(performer.CritRating())) _isCrit = true;;
+	target.increaseAP(_stats._APConsumption); // допустим, цель получает инициативу
 
-		if (ProbabilityResolver::IsBlock(target.BlockRating())) _result = ActionResult::BLOCK;
-
-		else _result = ActionResult::HIT;
+	if (!ProbabilityResolver::IsHit(performer.HitRating(), target.Evasion())) {
+		report.result = ActionReport::ActionResult::MISS;
+		return report;
 	}
-	else _result = ActionResult::MISS;
 
-	int damage = (performer.MaxDamage() + performer.MinDamage()) / 2;
-	int result_damage = damage * 1 + (performer.ArmorPenetration() - target.Armor()) / 100;
+	if (ProbabilityResolver::IsCrit(performer.CritRating())) {
+		report.isCrit = true;
+		report.result = ActionReport::ActionResult::CRIT;
+	}
+	else {
+		report.result = ActionReport::ActionResult::HIT;
+	}
 
-	if (result_damage > damage) result_damage = damage;
+	if (ProbabilityResolver::IsBlock(target.BlockRating())) {
+		report.isBlocked = true;
+		report.result = ActionReport::ActionResult::BLOCK;
+	}
 
-	target.decreaseHp(result_damage);
+	int baseDamage = ProbabilityResolver::GetDamage(performer.MinDamage(), performer.MaxDamage());
+	int modifiedDamage = static_cast<int>(baseDamage * _stats._damageMultiplier) + _stats._damageFlatBonus;
+
+	float absorptionRate = (target.Armor() - performer.ArmorPenetration()) / 1000;
+	absorptionRate = absorptionRate > 0 ? absorptionRate : 0;
+
+	modifiedDamage *= 1 - absorptionRate;
+	if (modifiedDamage < 0) modifiedDamage = 0;
+
+	report.damageDealt = modifiedDamage;
+	target.decreaseHp(modifiedDamage);
+
+	return report;
 }
-
-StandardAttack::~StandardAttack() = default;

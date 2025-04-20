@@ -5,7 +5,7 @@ class StandardAttack : public Technique
 public:
 	StandardAttack(const TechniqueStats& stats);
 
-	void Execute(Combatant& performer, Combatant& target) const override;
+	ActionReport Execute(Combatant& performer, Combatant& target) const override;
 
 	virtual ~StandardAttack();
 };

@@ -12,7 +12,7 @@ protected:
 public:
 	Technique(const TechniqueStats& stats);
 
-	virtual void Execute(Combatant& performer, Combatant& target) const = 0;
+	virtual ActionReport Execute(Combatant& performer, Combatant& target) const = 0;
 
 	virtual ~Technique();
 };

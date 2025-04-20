@@ -127,11 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BattleSystem.cpp" />
+    <ClCompile Include="BattleUI.cpp" />
     <ClCompile Include="CombatAction.cpp" />
     <ClCompile Include="Combatant.cpp" />
     <ClCompile Include="ConsoleRPG.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="HashTable.h" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="MainMenuUI.cpp" />
@@ -141,6 +144,9 @@
     <ClCompile Include="Technique.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ActionReport.h" />
+    <ClInclude Include="BattleSystem.h" />
+    <ClInclude Include="BattleUI.h" />
     <ClInclude Include="CombatantStats.h" />
     <ClInclude Include="CombatAction.h" />
     <ClInclude Include="Combatant.h" />
@@ -150,11 +156,11 @@
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="MainMenuUI.h" />
     <ClInclude Include="ProbabilityResolver.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="StandardAttack.h" />
     <ClInclude Include="string.h" />
     <ClInclude Include="Technique.h" />
     <ClInclude Include="TechniqueStats.h" />
+    <ClInclude Include="vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ConsoleRPG.rc" />

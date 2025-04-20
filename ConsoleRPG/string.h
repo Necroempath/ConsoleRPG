@@ -6,6 +6,8 @@ class string
 	size_t _len;
 	size_t _capacity;
 
+	static constexpr size_t CAPACITY = 10;
+
 	void Default();
 	void Init(const string& str);
 	size_t length(const char* str) const;
@@ -20,7 +22,7 @@ class string
 public:
 	string();
 
-	explicit string(const char* str);
+	string(const char* str);
 
 	explicit string(const size_t len);
 
@@ -76,5 +78,3 @@ public:
 
 	~string();
 };
-
-

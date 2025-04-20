@@ -1,17 +1,16 @@
 #pragma once
 #include "Combatant.h"
 #include "ProbabilityResolver.h"
+#include "ActionReport.h"
 class CombatAction
 {
 protected:
 	static string _name;
 
 public:
-#pragma region Accessors
-	string GetName() const;
-#pragma endregion
+	static string GetName();
 
-	virtual void Execute(Combatant& performer, Combatant& targer) const = 0;
+	virtual ActionReport Execute(Combatant& performer, Combatant& target) const = 0;
 
 	virtual ~CombatAction();
 };
