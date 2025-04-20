@@ -3,7 +3,7 @@
 
 int main()
 {
-    Game::launch();
+    Game::Launch();
 
     return 0;
 }

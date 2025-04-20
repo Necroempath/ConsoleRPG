@@ -11,6 +11,7 @@ struct CombatantStats
 	int maxDamage = 0;
 	int hitRating = 0;
 	int critRating = 0;
+	int critMultiplier = 0;
 	int evasion = 0;
 	int blockRating = 0;
 	int blockPower = 0;

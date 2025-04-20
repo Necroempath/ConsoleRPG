@@ -13,23 +13,25 @@ protected:
 
     Combatant(const string& name, const CombatantStats& stats) : _name(name), _stats(stats), _temp() {};
 
+public:
 #pragma region Accessors
-    int hp() const;
-    int maxHp() const;
-    int stamina() const;
-    int maxStamina() const;
+    int Hp() const;
+    int MaxHp() const;
+    int Stamina() const;
+    int MaxStamina() const;
     int AP() const;
-    int speed() const;
-    int minDamage() const;
-    int maxDamage() const;
-    int hitRating() const;
-    int critRating() const;
-    int evasion() const;
-    int blockRating() const;
-    int blockPower() const;
-    int armor() const;
-    int armorPenetration() const;
-    int resistance() const;
+    int Speed() const;
+    int MinDamage() const;
+    int MaxDamage() const;
+    int HitRating() const;
+    int CritRating() const;
+    int CritMultiplier() const;
+    int Evasion() const;
+    int BlockRating() const;
+    int BlockPower() const;
+    int Armor() const;
+    int ArmorPenetration() const;
+    int Resistance() const;
 #pragma endregion
 
 #pragma region StatModifiers
@@ -46,7 +48,6 @@ protected:
 	void increaseAP(const int value);
 #pragma endregion
 
-public:
 	virtual ~Combatant();
 };
 

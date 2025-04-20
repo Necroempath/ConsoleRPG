@@ -12,7 +12,7 @@ public:
 		EXIT,
 	};
 
-	static void print();
+	static void Print();
 
 	virtual ~MainMenuUI();
 };

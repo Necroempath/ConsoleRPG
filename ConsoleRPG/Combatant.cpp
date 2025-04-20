@@ -1,22 +1,23 @@
 #include "Combatant.h"
 
 #pragma region Accessors
-int Combatant::hp() const { return _stats.hp; }
-int Combatant::maxHp() const { return _stats.maxHp; }
-int Combatant::stamina() const { return _stats.stamina; }
-int Combatant::maxStamina() const { return _stats.maxStamina; }
+int Combatant::Hp() const { return _stats.hp; }
+int Combatant::MaxHp() const { return _stats.maxHp; }
+int Combatant::Stamina() const { return _stats.stamina; }
+int Combatant::MaxStamina() const { return _stats.maxStamina; }
 int Combatant::AP() const { return _stats.AP; }
-int Combatant::speed() const { return _stats.speed; }
-int Combatant::minDamage() const { return _stats.minDamage; }
-int Combatant::maxDamage() const { return _stats.maxDamage; }
-int Combatant::hitRating() const { return _stats.hitRating; }
-int Combatant::critRating() const { return _stats.critRating; }
-int Combatant::evasion() const { return _stats.evasion; }
-int Combatant::blockRating() const { return _stats.blockRating; }
-int Combatant::blockPower() const { return _stats.blockPower; }
-int Combatant::armor() const { return _stats.armor; }
-int Combatant::armorPenetration() const { return _stats.armorPenetration; }
-int Combatant::resistance() const { return _stats.resistance; }
+int Combatant::Speed() const { return _stats.speed; }
+int Combatant::MinDamage() const { return _stats.minDamage; }
+int Combatant::MaxDamage() const { return _stats.maxDamage; }
+int Combatant::HitRating() const { return _stats.hitRating; }
+int Combatant::CritRating() const { return _stats.critRating; }
+int Combatant::CritMultiplier() const { return _stats.critMultiplier; }
+int Combatant::Evasion() const { return _stats.evasion; }
+int Combatant::BlockRating() const { return _stats.blockRating; }
+int Combatant::BlockPower() const { return _stats.blockPower; }
+int Combatant::Armor() const { return _stats.armor; }
+int Combatant::ArmorPenetration() const { return _stats.armorPenetration; }
+int Combatant::Resistance() const { return _stats.resistance; }
 #pragma endregion
 
 #pragma region StatModifiers

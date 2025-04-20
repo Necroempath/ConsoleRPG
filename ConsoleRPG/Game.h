@@ -4,7 +4,7 @@
 class Game
 {
 public:
-	static void launch();
+	static void Launch();
 
 	virtual ~Game();
 };

@@ -3,9 +3,9 @@
 class StandardAttack : public Technique
 {
 public:
-	StandardAttack() {};
+	StandardAttack(const TechniqueStats& stats);
 
-	void execute(Combatant& performer, Combatant& target) const override;
+	void Execute(Combatant& performer, Combatant& target) const override;
 
 	virtual ~StandardAttack();
 };

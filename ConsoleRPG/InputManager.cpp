@@ -1,6 +1,6 @@
 #include "InputManager.h"
 
-short InputManager::input()
+short InputManager::Input()
 {
 	short input;
 	std::cin >> input;

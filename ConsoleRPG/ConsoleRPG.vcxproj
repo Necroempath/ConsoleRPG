@@ -135,6 +135,7 @@
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="MainMenuUI.cpp" />
+    <ClCompile Include="ProbabilityResolver.cpp" />
     <ClCompile Include="StandardAttack.cpp" />
     <ClCompile Include="string.cpp" />
     <ClCompile Include="Technique.cpp" />
@@ -148,10 +149,15 @@
     <ClInclude Include="Hero.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="MainMenuUI.h" />
+    <ClInclude Include="ProbabilityResolver.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="StandardAttack.h" />
     <ClInclude Include="string.h" />
     <ClInclude Include="Technique.h" />
     <ClInclude Include="TechniqueStats.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ConsoleRPG.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

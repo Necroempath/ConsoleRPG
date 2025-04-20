@@ -1,14 +1,13 @@
 #include "CombatAction.h"
 
 #pragma region Accessors
-string CombatAction::getName() const
+string CombatAction::GetName() const
 {
 	return _name;
 }
-
-int CombatAction::getId() const
+CombatAction::ActionResult CombatAction::GetResult() const
 {
-	return _id;
+	return _result;
 }
 #pragma endregion
 

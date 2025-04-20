@@ -3,7 +3,7 @@
 class InputManager
 {
 public:
-	static short input();
+	static short Input();
 
 	virtual ~InputManager();
 };

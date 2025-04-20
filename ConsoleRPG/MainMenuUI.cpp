@@ -1,6 +1,6 @@
 #include "MainMenuUI.h"
 
-void MainMenuUI::print() 
+void MainMenuUI::Print() 
 {
 	std::cout 
 		<< "1. New journey"
